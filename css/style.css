@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*,
+*:after,
+*:before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus
+{
+    outline: 0;
+    outline-offset: 0;
+}
+
+
+.container-fluid
+{
+    height: 100%;
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #A82C48 ;
+}
+
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+}
+
+
+:root{
+    --primary-color: #A82C48;
+    --secondary-color: #43121d;
+    --third-color: #f98169;
+    --white-color: #fff;
+    --text-color: #555;
+    --text-gray: #999;
+    --blac-color: #000;
+    --primary-font: 'Roboto' sans-serif;
+    --secondary-font: 'Quicksand', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body{
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 350;
+    height: 100%;
+
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: #f98169;
+}
+
+
+p{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/* CUSTOM SCROLL BAR */
+::-webkit-scrollbar{       /*use webkit if you want to apply custom scrollbar to the broser directly otherwise do it insed an id class*/
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track
+{
+    background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #fff;
+}
+
+
+.main-btn
+{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: #A82C48;
+    border: 0.1875rem solid #A82C48;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: 650;
+    text-transform: capitalize;
+    box-shadow: 0px 2px 10px -1px rgb(0,0,0);
+    -webkit-transition: all .4s ease-out; /*safari and chrome*/
+    transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+}
+
+.main-btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+
+/*HEADER SECTION (NAV BAR) */
+.nav-wrap
+{
+    position: fixed;
+    width: 100%;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+
+.nav-wrap .nav-item{
+    padding: 0 0.625rem;
+    transition: all 200ms linear;
+}
+
+.navbar-toggler-focus{
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+
+.nav-link
+{
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.nav-wrap .main-btn{
+    padding: 0.3125rem 1.5rem;
+    box-shadow: none;
+    margin-left: 0.625rem;
+}
+
+.nav-wrap.scroll-on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.125rem 1.75 rem 0 rg(0,0,0,0.9);
+    transition: all .15s ease-in-out 0s;
+}
+
+/*Banner */
+.top-banner
+{
+    width: 100%;
+    background: url("../images/bg/bg-1.png") right no-repeat; 
+    padding: 16.875rem 0 9.375rem;
+
+}
+
+.top-banner .main-btn:hover{
+    background-color: none;
+}
+
+/*Counter section */
+
+
+
+@media(max-width: 991px){
+    .nav-wrap .navbar-brand img{
+        height: 3.8125rem;
+    }
+
+    .nav-wrap{
+        text-align: center;
+        
+    }
+
+    .nav-wrap .nav-link
+    {
+        line-height: 1.8rem;
+        height: 100px;
+    }
+
+    .nav-item a{
+        font-size: 2rem;
+    }
+
+    .navitem .main-btn{
+        font-size: 2rem;
+        line-height: 2em;
+    }
+
+    .top-banner
+    {
+        padding: 9.375rem;
+
+    }
+}
